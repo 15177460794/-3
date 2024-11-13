@@ -1,6 +1,7 @@
 import requests
 import time
-
+import asyncio
+from push_notification import push
 
 def get_token():
     url = 'https://api.xixunyun.com/login/api'
@@ -11,8 +12,8 @@ def get_token():
         "User-Agent": "okhttp/3.8.0",
     }
     payload = {
-        "account": "学号",
-        "password": "密码",
+        "account": "221020830107",
+        "password": "330577415@Ryj",
         "request_source": "3",
         "school_id": "267",
     }
@@ -29,23 +30,29 @@ def sign_in(token):
         "User-Agent": "okhttp/3.8.0",
     }
     payload = {
-        "address": "广东省惠州市惠城区滨河东路15号靠近展创大厦",
+        "address": "广东省广州市天河区APM线",
         "province": "广东省",
-        "city": "惠州市",
-        "latitude": "JlCkFWfvW+5k2bpJMfjUo6cqz361GjTSSifzxR8Zz4nnQOFsNCh8yp6l4Imw5gMcqa2Zg46EXk24XfJiNq23tmajmP6bf84PRbCLR8wVDX9s1lUI4fvfzxPG/Vv02OO74Q1nnlw1Otn57FWYAfC4cpLFmfBauX3JZ1sGp5firpQ=",
+        "city": "广州市",
+        "latitude": "yjE7UWHPf3Rd21pPp8WKghp0LUgeKLGybPbgGerlX1/89RxeNLvpjLDzhdpUtbbrM0Rwj0GT4Err\nXNShWKQrJ8QoCp/dbnqStw62A2bFt9hPtD0myGHI6NaSfWeDdVHP5wKZRNdtGxtJTF4fSLVs42ie\nKkLYkz64P0ipTmiUBkE=\n",
         "remark": "0",
         "comment": "",
-        "address_name": "展创大厦",
+        "address_name": "黄埔大道(地铁站)",
         "change_sign_resource": "0",
-        "longitude": "qoRSdAcfSydE7VHFdw2ozgxRAq2LJuV4xecaGiQw1YjOdOjGTloM+BVwlp4+uvj59hmQdIAHtlGAW+rX14E5ld6Rwo51OQ30LsCA+GL85nU1PjCwI9kkvbwqCsG+VISIvoHlXyJZU5AXRgdPY//WvTId/nWALNrkwyl2PNKLZdc="
+        "longitude": "LF81jHnOPdqgrcvW8sSTfLRtxoaI5vcgsxhZ06IepCfDLkX5t36JwipHOOXmbUClZvhYM4feOcFw\nRVdflYbZGFkTqj5CwlzdhuXV2f6l9jKwUH3PgcBvdzVdD5LF6N6pr/+0tKvPkqqTabQZNKc2qNpn\n+BUXr4nNU1DJGzCGWzs=\n"
     }
     response = requests.post(url, params=params, data=payload, headers=headers)
     return response.json()
 
 
-if __name__ == "__main__":
+async def main():
     token = get_token()
     print('token:', token)
+    await push(f'获取到 token: {token}')
     time.sleep(5)
     data = sign_in(token)
     print('message:', data['message'])
+    await push(f'签到结果: {data["message"]}')
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
