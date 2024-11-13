@@ -26,4 +26,4 @@ jobs:
         env:
           INVITE_CODE: ${{secrets.INVITE_CODE}}
           PUSHPLUS_TOKEN: ${{secrets.PUSHPLUS_TOKEN}}
-        run: python main.py
+        run: python sign_in1.py
