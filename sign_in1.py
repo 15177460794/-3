@@ -7,7 +7,6 @@ import os
 import re
 import aiohttp
 import uuid
-import image
 import recognize
 from rich import print_json
 
