@@ -20,7 +20,6 @@ def get_token():
     response = requests.post(url, params=params, headers=headers, data=payload)
     return response.json()['data']['token']
 
-
 def sign_in(token):
     url = 'https://api.xixunyun.com/signin_rsa'
     params = {
@@ -43,16 +42,30 @@ def sign_in(token):
     response = requests.post(url, params=params, data=payload, headers=headers)
     return response.json()
 
+async def pushplus_notification(message):
+    url = 'http://www.pushplus.plus/send'
+    headers = {
+        "Content-Type": "application/json",
+    }
+    payload = {
+        "token": "725f8c0c40f645fdb50c3ba3a4d306e7",  # 替换为你的 PushPlus Token
+        "title": "签到通知",
+        "content": message,
+        "template": "json"
+    }
+    response = requests.post(url, json=payload, headers=headers)
+    return response.json()
 
 async def main():
     token = get_token()
     print('token:', token)
     await push(f'获取到 token: {token}')
+    await pushplus_notification(f'获取到 token: {token}')
     time.sleep(5)
     data = sign_in(token)
     print('message:', data['message'])
     await push(f'签到结果: {data["message"]}')
-
+    await pushplus_notification(f'签到结果: {data["message"]}')
 
 if __name__ == "__main__":
     asyncio.run(main())
