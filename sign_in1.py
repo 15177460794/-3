@@ -1,7 +1,8 @@
 import requests
 import time
 
-def get_token():
+def get_token(account, password, school_id):
+    # 获取登录令牌
     url = 'https://api.xixunyun.com/login/api'
     params = {
         "version": "5.0.8",
@@ -10,15 +11,16 @@ def get_token():
         "User-Agent": "okhttp/3.8.0",
     }
     payload = {
-       "account": "221020830107",
-        "password": "330577415@Ryj",
+        "account": account,
+        "password": password,
         "request_source": "3",
-        "school_id": "267",
+        "school_id": school_id,
     }
     response = requests.post(url, params=params, headers=headers, data=payload)
     return response.json()['data']['token']
 
-def sign_in(token):
+def sign_in(token, address, province, city, latitude, longitude, address_name):
+    # 签到
     url = 'https://api.xixunyun.com/signin_rsa'
     params = {
         "token": token,
@@ -27,20 +29,21 @@ def sign_in(token):
         "User-Agent": "okhttp/3.8.0",
     }
     payload = {
-        "address": "广东省广州市天河区APM线",
-        "province": "广东省",
-        "city": "广州市",
-        "latitude": "yjE7UWHPf3Rd21pPp8WKghp0LUgeKLGybPbgGerlX1/89RxeNLvpjLDzhdpUtbbrM0Rwj0GT4Err\nXNShWKQrJ8QoCp/dbnqStw62A2bFt9hPtD0myGHI6NaSfWeDdVHP5wKZRNdtGxtJTF4fSLVs42ie\nKkLYkz64P0ipTmiUBkE=\n",
+        "address": address,
+        "province": province,
+        "city": city,
+        "latitude": latitude,
         "remark": "0",
         "comment": "",
-        "address_name": "黄埔大道(地铁站)",
+        "address_name": address_name,
         "change_sign_resource": "0",
-        "longitude": "LF81jHnOPdqgrcvW8sSTfLRtxoaI5vcgsxhZ06IepCfDLkX5t36JwipHOOXmbUClZvhYM4feOcFw\nRVdflYbZGFkTqj5CwlzdhuXV2f6l9jKwUH3PgcBvdzVdD5LF6N6pr/+0tKvPkqqTabQZNKc2qNpn\n+BUXr4nNU1DJGzCGWzs=\n"
+        "longitude": longitude
     }
     response = requests.post(url, params=params, data=payload, headers=headers)
     return response.json()
 
 def send_pushplus_message(token, title, content):
+    # 发送PushPlus消息
     url = 'http://www.pushplus.plus/send'
     data = {
         "token": token,
@@ -52,15 +55,43 @@ def send_pushplus_message(token, title, content):
     return response.json()
 
 if __name__ == "__main__":
-    token = get_token()
-    print('token:', token)
-    time.sleep(5)
-    data = sign_in(token)
-    print('message:', data['message'])
+    users = [
+        {
+            "account": "221020830107",
+            "password": "330577415@Ryj",
+            "school_id": "267",
+            "address": "广东省广州市天河区APM线",
+            "province": "广东省",
+            "city": "广州市",
+            "latitude": "yjE7UWHPf3Rd21pPp8WKghp0LUgeKLGybPbgGerlX1/89RxeNLvpjLDzhdpUtbbrM0Rwj0GT4Err\nXNShWKQrJ8QoCp/dbnqStw62A2bFt9hPtD0myGHI6NaSfWeDdVHP5wKZRNdtGxtJTF4fSLVs42ie\nKkLYkz64P0ipTmiUBkE=\n",
+            "longitude": "LF81jHnOPdqgrcvW8sSTfLRtxoaI5vcgsxhZ06IepCfDLkX5t36JwipHOOXmbUClZvhYM4feOcFw\nRVdflYbZGFkTqj5CwlzdhuXV2f6l9jKwUH3PgcBvdzVdD5LF6N6pr/+0tKvPkqqTabQZNKc2qNpn\n+BUXr4nNU1DJGzCGWzs=\n",
+            "address_name": "黄埔大道(地铁站)",
+            "pushplus_token": "725f8c0c40f645fdb50c3ba3a4d306e7"
+        },{
+            "account": "221020430147",
+            "password": "&Qaq201030",
+            "school_id": "267",
+            "address": "广东省珠海市斗门区珠海冠宇集团南园区(北门)附近",
+            "province": "广东省",
+            "city": "珠海市",
+            "latitude": "IgLOdsjHzVhklQlwdLJ558PkEOmNu73PDGn1uH8lONt1J+OrOI5qmgs7tNa3Gj+GTaYX+D8lJilF\n5HiW4YoCt9DWWz8h6SryfYreUInYD5Oa9+0a0ln6dOaXSewY9rq28voiKDldsqfy+k1RgGOb7y1M\nQbXdlVb/MKGhdNQbSFU=\n",
+            "longitude": "hZDbVFV2/AcRj3FpU/VIPZSAWQu653Gh+qBNcdQLmBemnf72rbC5Q+nl/yWElbYaSBDXRkBkZZm/\nBTTS4L9oL7WteG3BomuYkdxIDp4EJInh1MQn0fcdP99EXgZgsu7HCmDCjmY2vfIj+KvNYr4PaPnn\nRpLpqgIlNl9DqEuTmes=\n",
+            "address_name": "珠海冠宇七厂一期北丰巢柜",
+            "pushplus_token": "d298beb43ca54592b7311eab59520d89"
+            
+        },
+        # 添加更多用户信息
+    ]
 
-    # 发送 PushPlus 消息
-    pushplus_token = '725f8c0c40f645fdb50c3ba3a4d306e7'
-    title = '签到结果'
-    content = f"签到消息: {data['message']}"
-    pushplus_response = send_pushplus_message(pushplus_token, title, content)
-    print('PushPlus response:', pushplus_response)
+    for user in users:
+        token = get_token(user["account"], user["password"], user["school_id"])
+        print('token:', token)
+        time.sleep(5)
+        data = sign_in(token, user["address"], user["province"], user["city"], user["latitude"], user["longitude"], user["address_name"])
+        print('message:', data['message'])
+
+        # 发送 PushPlus 消息
+        title = '签到结果'
+        content = f"签到消息: {data['message']}"
+        pushplus_response = send_pushplus_message(user["725f8c0c40f645fdb50c3ba3a4d306e7","d298beb43ca54592b7311eab59520d89"], title, content)
+        print('PushPlus response:', pushplus_response)
