@@ -93,5 +93,5 @@ if __name__ == "__main__":
         # 发送 PushPlus 消息
         title = '签到结果'
         content = f"签到消息: {data['message']}"
-        pushplus_response = send_pushplus_message(user["725f8c0c40f645fdb50c3ba3a4d306e7","d298beb43ca54592b7311eab59520d89"], title, content)
+        pushplus_response = send_pushplus_message(user["pushplus_token"], title, content)
         print('PushPlus response:', pushplus_response)
