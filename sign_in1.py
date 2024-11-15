@@ -69,7 +69,7 @@ if __name__ == "__main__":
             "pushplus_token": "725f8c0c40f645fdb50c3ba3a4d306e7"
         },{
             "account": "221020430147",
-            "password": "&Qaq201030",
+            "password": "$qaQ201030",
             "school_id": "267",
             "address": "广东省珠海市斗门区珠海冠宇集团南园区(北门)附近",
             "province": "广东省",
