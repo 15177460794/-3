@@ -79,7 +79,7 @@ if __name__ == "__main__":
             "address_name": "珠海冠宇七厂一期北丰巢柜",
             "pushplus_token": "d298beb43ca54592b7311eab59520d89"
             
-        },
+        }
         # 添加更多用户信息
     ]
 
