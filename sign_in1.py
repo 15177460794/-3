@@ -79,6 +79,18 @@ if __name__ == "__main__":
             "address_name": "珠海冠宇七厂一期北丰巢柜",
             "pushplus_token": "d298beb43ca54592b7311eab59520d89"
             
+        },{
+            "account": "221020830124",
+            "password": "asdDSA123@",
+            "school_id": "267",
+            "address": "广东省广州市天河区黄埔大道西33号(近地铁体育西站、公交天河站)",
+            "province": "广东省",
+            "city": "广州市",
+            "latitude": "DqdC68NRG1bXwgOJ2+Kb2YDcw7Pu5GMbdIaQda7W92P/LFHK0aQxHfDum9qHDvKaE/8i2PanYumi\nmdv7REGg3TWhIP5s256kNZLSz68lNJQ7dhYIhrL8Sxyp0t+s04AIpKkFOVOkmt6g3mac34Y7Mdca\n/ep1PlRWc8djsVAQSA4=\n",
+            "longitude": "dlkEcEcZAsVToGb1m01iHjhSP0q53MyZQg/M+hXairAdd2LFKHopLaUvk3cnomizgzjM2hQcUad1\nZTtOgYhMvSm//xWjVtcKCEMCSLglWc5hkJI00ohyu41FaR/oKV/PKamYHntNsstiPrDuPoea78vF\nQYQxCzCm6owCMwxEPfA=\n",
+            "address_name": "三新大厦",
+            "pushplus_token": "725f8c0c40f645fdb50c3ba3a4d306e7"
+            
         }
         # 添加更多用户信息
     ]
@@ -95,3 +107,4 @@ if __name__ == "__main__":
         content = f"签到消息: {data['message']}"
         pushplus_response = send_pushplus_message(user["pushplus_token"], title, content)
         print('PushPlus response:', pushplus_response)
+1
