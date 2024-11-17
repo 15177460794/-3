@@ -91,6 +91,21 @@ if __name__ == "__main__":
             "address_name": "三新大厦",
             "pushplus_token": "725f8c0c40f645fdb50c3ba3a4d306e7"
             
+        },{
+            "account": "221020830128",
+            "password": "qQ2782363488.",
+            "school_id": "267",
+            "address": "广西壮族自治区玉林市北流市靠近广西北流华生瓷业有限责任公司",
+            "province": "广西壮族自治区",
+            "city": "玉林市",
+            "latitude": "Nq+4e/CepdPvPDOe0CfdBEbqU0BRJJG3av6JGlRxV/WjFc/2XG1uTc2A6lgnrFYXz3X/SODMeH6e
+yrueixIz6LjBdhjeioZuK+a2WrrXsiLBVW8IU8J1kMsIcusyXgJOtzF41/JGwFPEu3Kcq2QaMWHD
+h5yj1S4lbmgeSU7TPBo=",
+            "longitude": "XKCtKhu3cgW6RCrr9tVs/csm/KCIRhbTDsbdAmuMZEoJ5iEVoZSSZg39NJPpZAHJJzfJbR5KIdpM
+dT2SbopSs+ySeuDQKI7P4arQskAFUsObR5KVHx94bttKvVPGJYxfsES0RuTqJjN30gx2dBBWdXD5
+fgXf8ZFWK/9kzXIaNiA=",
+            "address_name": "广西北流华生瓷业有限责任公司",
+            "pushplus_token": "7861c1489c324e74b5fd7334e5a1b728"
         }
         # 添加更多用户信息
     ]
