@@ -59,13 +59,13 @@ if __name__ == "__main__":
         {
             "account": "221020830107",
             "password": "330577415@Ryj",
-            "school_id": "267",
-            "address": "广东省广州市天河区APM线",
+            "school_id": "2376h2",
+            "address": "广东省广州市番禺区惠众街21号靠近香港番禺工商联谊会大厦",
             "province": "广东省",
             "city": "广州市",
-            "latitude": "yjE7UWHPf3Rd21pPp8WKghp0LUgeKLGybPbgGerlX1/89RxeNLvpjLDzhdpUtbbrM0Rwj0GT4Err\nXNShWKQrJ8QoCp/dbnqStw62A2bFt9hPtD0myGHI6NaSfWeDdVHP5wKZRNdtGxtJTF4fSLVs42ie\nKkLYkz64P0ipTmiUBkE=\n",
-            "longitude": "LF81jHnOPdqgrcvW8sSTfLRtxoaI5vcgsxhZ06IepCfDLkX5t36JwipHOOXmbUClZvhYM4feOcFw\nRVdflYbZGFkTqj5CwlzdhuXV2f6l9jKwUH3PgcBvdzVdD5LF6N6pr/+0tKvPkqqTabQZNKc2qNpn\n+BUXr4nNU1DJGzCGWzs=\n",
-            "address_name": "黄埔大道(地铁站)",
+            "latitude": "UQWXgG/pTDNcEgohMJfyRftuOZQLTAVG3dMphr++87HDdYurNMwBfR0tugweEqFn0JEpTSomQRxwHxIAZRr9EWWt3wD8cj84efxL5Lnj4ywXfAw9DKdMPfdQ7XM1E3jtEoChUtcAY5gxZ5vt6qw6ZGE565QMHji17+fFFrlICDw=",
+            "longitude": "lTDkAl8mMCIVT3njVRSmqVdcBrjGHF1NwKdJMJKAHdsw1GwKvzz2m4TvRk5VsTz66LOshlG/yx6nt7ZwTTZR5LABBOVBJcPILQ+DYsFJUFEMFgATQX2QJxUreW1dWFYLzfgdHVLh/PUmES4eYuLBWUKX5ZRL5D0kju7eiddXstQ=",
+            "address_name": "香港番禺工商联谊会大厦",
             "pushplus_token": "725f8c0c40f645fdb50c3ba3a4d306e7"
         }
         # 添加更多用户信息
