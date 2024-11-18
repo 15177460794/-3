@@ -102,6 +102,17 @@ if __name__ == "__main__":
             "longitude": "XKCtKhu3cgW6RCrr9tVs/csm/KCIRhbTDsbdAmuMZEoJ5iEVoZSSZg39NJPpZAHJJzfJbR5KIdpMdT2SbopSs+ySeuDQKI7P4arQskAFUsObR5KVHx94bttKvVPGJYxfsES0RuTqJjN30gx2dBBWdXD5fgXf8ZFWK/9kzXIaNiA=",
             "address_name": "广西北流华生瓷业有限责任公司",
             "pushplus_token": "7861c1489c324e74b5fd7334e5a1b728"
+        },{
+            "account": "0708220244",
+            "password": "Aa@20031129",
+            "school_id": "267",
+            "address": "广东省广州市番禺区惠众街21号靠近香港番禺工商联谊会大厦",
+            "province": "广东省",
+            "city": "广州市",
+            "latitude": "UQWXgG/pTDNcEgohMJfyRftuOZQLTAVG3dMphr++87HDdYurNMwBfR0tugweEqFn0JEpTSomQRxwHxIAZRr9EWWt3wD8cj84efxL5Lnj4ywXfAw9DKdMPfdQ7XM1E3jtEoChUtcAY5gxZ5vt6qw6ZGE565QMHji17+fFFrlICDw=",
+            "longitude": "lTDkAl8mMCIVT3njVRSmqVdcBrjGHF1NwKdJMJKAHdsw1GwKvzz2m4TvRk5VsTz66LOshlG/yx6nt7ZwTTZR5LABBOVBJcPILQ+DYsFJUFEMFgATQX2QJxUreW1dWFYLzfgdHVLh/PUmES4eYuLBWUKX5ZRL5D0kju7eiddXstQ=",
+            "address_name": "香港番禺工商联谊会大厦",
+            "pushplus_token": ""
         }
         # 添加更多用户信息
     ]
