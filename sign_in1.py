@@ -112,7 +112,7 @@ if __name__ == "__main__":
             "latitude": "UQWXgG/pTDNcEgohMJfyRftuOZQLTAVG3dMphr++87HDdYurNMwBfR0tugweEqFn0JEpTSomQRxwHxIAZRr9EWWt3wD8cj84efxL5Lnj4ywXfAw9DKdMPfdQ7XM1E3jtEoChUtcAY5gxZ5vt6qw6ZGE565QMHji17+fFFrlICDw=",
             "longitude": "lTDkAl8mMCIVT3njVRSmqVdcBrjGHF1NwKdJMJKAHdsw1GwKvzz2m4TvRk5VsTz66LOshlG/yx6nt7ZwTTZR5LABBOVBJcPILQ+DYsFJUFEMFgATQX2QJxUreW1dWFYLzfgdHVLh/PUmES4eYuLBWUKX5ZRL5D0kju7eiddXstQ=",
             "address_name": "香港番禺工商联谊会大厦",
-            "pushplus_token": ""
+            "pushplus_token": "725f8c0c40f645fdb50c3ba3a4d306e7"
         }
         # 添加更多用户信息
     ]
