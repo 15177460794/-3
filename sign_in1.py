@@ -71,12 +71,12 @@ if __name__ == "__main__":
             "account": "221020430147",
             "password": "$qaQ201030",
             "school_id": "267",
-            "address": "广东省珠海市斗门区珠海冠宇集团南园区(北门)附近",
+            "address": "广东省广州市天河区APM线",
             "province": "广东省",
-            "city": "珠海市",
-            "latitude": "IgLOdsjHzVhklQlwdLJ558PkEOmNu73PDGn1uH8lONt1J+OrOI5qmgs7tNa3Gj+GTaYX+D8lJilF\n5HiW4YoCt9DWWz8h6SryfYreUInYD5Oa9+0a0ln6dOaXSewY9rq28voiKDldsqfy+k1RgGOb7y1M\nQbXdlVb/MKGhdNQbSFU=\n",
-            "longitude": "hZDbVFV2/AcRj3FpU/VIPZSAWQu653Gh+qBNcdQLmBemnf72rbC5Q+nl/yWElbYaSBDXRkBkZZm/\nBTTS4L9oL7WteG3BomuYkdxIDp4EJInh1MQn0fcdP99EXgZgsu7HCmDCjmY2vfIj+KvNYr4PaPnn\nRpLpqgIlNl9DqEuTmes=\n",
-            "address_name": "珠海冠宇七厂一期北丰巢柜",
+            "city": "广州市",
+            "latitude": "yjE7UWHPf3Rd21pPp8WKghp0LUgeKLGybPbgGerlX1/89RxeNLvpjLDzhdpUtbbrM0Rwj0GT4Err\nXNShWKQrJ8QoCp/dbnqStw62A2bFt9hPtD0myGHI6NaSfWeDdVHP5wKZRNdtGxtJTF4fSLVs42ie\nKkLYkz64P0ipTmiUBkE=\n",
+            "longitude": "LF81jHnOPdqgrcvW8sSTfLRtxoaI5vcgsxhZ06IepCfDLkX5t36JwipHOOXmbUClZvhYM4feOcFw\nRVdflYbZGFkTqj5CwlzdhuXV2f6l9jKwUH3PgcBvdzVdD5LF6N6pr/+0tKvPkqqTabQZNKc2qNpn\n+BUXr4nNU1DJGzCGWzs=\n",
+            "address_name": "黄埔大道(地铁站)",
             "pushplus_token": "d298beb43ca54592b7311eab59520d89"
             
         },{
