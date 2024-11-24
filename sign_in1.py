@@ -1,5 +1,6 @@
 import requests
 import time
+from datetime import datetime
 
 def get_token(account, password, school_id):
     # 获取登录令牌
@@ -28,12 +29,20 @@ def sign_in(token, address, province, city, latitude, longitude, address_name):
     headers = {
         "User-Agent": "okhttp/3.8.0",
     }
+    
+    # 判断当前日期是周几
+    current_day = datetime.now().weekday()
+    if current_day < 5:  # 周一到周五
+        remark = "0"
+    else:  # 周末
+        remark = "14"
+    
     payload = {
         "address": address,
         "province": province,
         "city": city,
         "latitude": latitude,
-        "remark": "0",
+        "remark": remark,
         "comment": "",
         "address_name": address_name,
         "change_sign_resource": "0",
@@ -55,7 +64,7 @@ def send_pushplus_message(token, title, content):
     return response.json()
 
 if __name__ == "__main__":
-    users = [
+    users =  [
         {
             "account": "221020830107",
             "password": "330577415@Ryj",
