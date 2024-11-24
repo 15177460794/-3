@@ -102,6 +102,17 @@ if __name__ == "__main__":
             "longitude": "XKCtKhu3cgW6RCrr9tVs/csm/KCIRhbTDsbdAmuMZEoJ5iEVoZSSZg39NJPpZAHJJzfJbR5KIdpMdT2SbopSs+ySeuDQKI7P4arQskAFUsObR5KVHx94bttKvVPGJYxfsES0RuTqJjN30gx2dBBWdXD5fgXf8ZFWK/9kzXIaNiA=",
             "address_name": "广西北流华生瓷业有限责任公司",
             "pushplus_token": "7861c1489c324e74b5fd7334e5a1b728"
+        },{
+            "account": "221050530111",
+            "password": "Fanyijun1212@",
+            "school_id": "267",
+            "address": "广东省惠州市惠城区和畅六路37号靠近罗格朗智能电气(惠州)有限公司宿舍区",
+            "province": "广东省",
+            "city": "惠州市",
+            "latitude": "Q77arll5f+6Fwz/aRVeMWRteMFdR+qhhcKE7nOEhxsCdx+aInj2IPnYA2tSCMWcVgoR1wK4lt0mnnfNG3moIgxqJowoFmOzxFe6CLtdtZKkXLdq3zZ3Fxnw896J96ZTh8tgvBCAGmzxfptdXUqHDmZk7A56IQwUGY5/9Komxgm8=",
+            "longitude": "aKqdXsA6ceHzNQy05wfnnwKtwH7WAEPO/cVoBT3UNivHWyA4vsR4NQ/dGa65A0sudxoVS6WajRPxuVAfG/wJVakQLyXTV2mARJpJ7Oe/9X+31IAOaF6MOBEHvyUAQTTLWtrB9JixeIxCDQV/99uFfF1OTYv+VolLXdCSgD7lHp8=",
+            "address_name": "罗格朗智能电气(惠州)有限公司宿舍区",
+            "pushplus_token": "5deb739ac0a6468fb174ab61738eedf1"
         }
         # 添加更多用户信息
     ]
