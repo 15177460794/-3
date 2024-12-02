@@ -1,4 +1,5 @@
 name: main.yml
+
 on:
   workflow_dispatch: # 允许手动触发工作流
   push:
@@ -9,21 +10,31 @@ on:
       - '!README.md'
   schedule:
     # 每天早上9点执行一次
-    - cron:  '0 1 * * *'
+    - cron: '0 1 * * *'
+    # 每天下午5:30执行一次
+    - cron: '30 9 * * *'
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Set Time
         run: sudo timedatectl set-timezone 'Asia/Shanghai'
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
           python-version: '3.9'
-      - run: pip install -r requirements.txt
-      - name: Run
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run script
         env:
-          INVITE_CODE: ${{secrets.INVITE_CODE}}
-          PUSHPLUS_TOKEN: ${{secrets.PUSHPLUS_TOKEN}}
+          INVITE_CODE: ${{ secrets.INVITE_CODE }}
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
         run: python sign_in1.py
