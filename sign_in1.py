@@ -132,7 +132,7 @@ if __name__ == "__main__":
             "latitude": "Wth/QCi3syKu+pylKdDVdRTOgf5IY62GvhtK+O3c44bx7QesaoXRIiFy1FmjjP2DvrD+Omjz0+KF5OwIGSa6qKQ2fEry8jEWTgh2ohRuihwh2W/zGDPgTK7usLY+sYGfkM4yOGxoUyU+mhdyNVTg+AE+HepFX1BvtcEHavtPJDE=",
             "longitude": "b73GL+ysgsJAJihOa4roQERCrCRMckSxVuCN54p9LR68ic9UQmTGdkFuk9tnjTOxWoTGoSSakeCMXDYoZUZUQhFMHTmjiQEgXBXQEY2G0w5UBNTPgjVQZdEexY1pJs1dl8UoA/yrWpLRCCSTnJijuTXUbDOY0Cx1Sb6XsvWbSNk=",
             "address_name": "广东鸿特精密技术(台山)有限公司",
-            "pushplus_token": ""
+            "pushplus_token": "725f8c0c40f645fdb50c3ba3a4d306e7"
         }
         # 添加更多用户信息
     ]
