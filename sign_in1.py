@@ -122,6 +122,17 @@ if __name__ == "__main__":
             "longitude": "aKqdXsA6ceHzNQy05wfnnwKtwH7WAEPO/cVoBT3UNivHWyA4vsR4NQ/dGa65A0sudxoVS6WajRPxuVAfG/wJVakQLyXTV2mARJpJ7Oe/9X+31IAOaF6MOBEHvyUAQTTLWtrB9JixeIxCDQV/99uFfF1OTYv+VolLXdCSgD7lHp8=",
             "address_name": "罗格朗智能电气(惠州)有限公司宿舍区",
             "pushplus_token": "5deb739ac0a6468fb174ab61738eedf1"
+        },{
+            "account": "18776572683",
+            "password": "asdZXC+123",
+            "school_id": "267",
+            "address": "广东省江门市台山市水步镇文华C区8号",
+            "province": "广东省",
+            "city": "江门市",
+            "latitude": "Wth/QCi3syKu+pylKdDVdRTOgf5IY62GvhtK+O3c44bx7QesaoXRIiFy1FmjjP2DvrD+Omjz0+KF5OwIGSa6qKQ2fEry8jEWTgh2ohRuihwh2W/zGDPgTK7usLY+sYGfkM4yOGxoUyU+mhdyNVTg+AE+HepFX1BvtcEHavtPJDE=",
+            "longitude": "b73GL+ysgsJAJihOa4roQERCrCRMckSxVuCN54p9LR68ic9UQmTGdkFuk9tnjTOxWoTGoSSakeCMXDYoZUZUQhFMHTmjiQEgXBXQEY2G0w5UBNTPgjVQZdEexY1pJs1dl8UoA/yrWpLRCCSTnJijuTXUbDOY0Cx1Sb6XsvWbSNk=",
+            "address_name": "广东鸿特精密技术(台山)有限公司",
+            "pushplus_token": "725f8c0c40f645fdb50c3ba3a4d306e7"
         }
         # 添加更多用户信息
     ]
@@ -138,4 +149,3 @@ if __name__ == "__main__":
         content = f"签到消息: {data['message']}"
         pushplus_response = send_pushplus_message(user["pushplus_token"], title, content)
         print('PushPlus response:', pushplus_response)
-1
