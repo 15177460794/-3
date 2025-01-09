@@ -23,7 +23,7 @@ def get_token(account, password, school_id):
         print(f"获取令牌失败 (账号: {account}):", response.json().get('message', 'Unknown error'))
         return None
 
-def sign_in(token, address, province, city, latitude, longitude, address_name, remark):
+def sign_in(token, account, address, province, city, latitude, longitude, address_name, remark):
     url = 'https://api.xixunyun.com/signin_rsa'
     params = {"token": token}
     headers = {"User-Agent": "okhttp/3.8.0"}
@@ -57,7 +57,7 @@ def send_pushplus_message(token, title, content):
     return response.json()
 
 if __name__ == "__main__":
-    users = [
+    users =  [
         {
             "account": "221020830107",
             "password": "330577415@Ryj",
@@ -146,7 +146,7 @@ if __name__ == "__main__":
         if token:
             print('token:', token)
             time.sleep(5)
-            data = sign_in(token, user["address"], user["province"], user["city"], user["latitude"], user["longitude"], user["address_name"], remark)
+            data = sign_in(token, user["account"], user["address"], user["province"], user["city"], user["latitude"], user["longitude"], user["address_name"], remark)
             print('message:', data['message'])
 
             title = '签到结果'
