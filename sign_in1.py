@@ -3,57 +3,58 @@ import time
 from datetime import datetime
 
 def get_token(account, password, school_id):
-    # 获取登录令牌
     url = 'https://api.xixunyun.com/login/api'
-    params = {
-        "version": "5.0.8",  # API版本
-    }
-    headers = {
-        "User-Agent": "okhttp/3.8.0",  # 请求头，模拟客户端
-    }
+    params = {"version": "5.0.8"}
+    headers = {"User-Agent": "okhttp/3.8.0"}
     payload = {
-        "account": account,  # 用户账号
-        "password": password,  # 用户密码
-        "request_source": "3",  # 请求来源
-        "school_id": school_id,  # 学校ID
+        "account": account,
+        "password": password,
+        "request_source": "3",
+        "school_id": school_id,
     }
-    response = requests.post(url, params=params, headers=headers, data=payload)  # 发送POST请求
-    return response.json()['data']['token']  # 返回Token
+    response = requests.post(url, params=params, headers=headers, data=payload)
+    
+    # 打印响应以进行调试
+    print(f"获取令牌响应 (账号: {account}):", response.text)
+    
+    if response.status_code == 200 and 'data' in response.json():
+        return response.json()['data']['token']
+    else:
+        print(f"获取令牌失败 (账号: {account}):", response.json().get('message', 'Unknown error'))
+        return None
 
 def sign_in(token, address, province, city, latitude, longitude, address_name, remark):
-    # 签到
     url = 'https://api.xixunyun.com/signin_rsa'
-    params = {
-        "token": token,  # 登录令牌
-    }
-    headers = {
-        "User-Agent": "okhttp/3.8.0",  # 请求头，模拟客户端
-    }
+    params = {"token": token}
+    headers = {"User-Agent": "okhttp/3.8.0"}
     payload = {
-        "address": address,  # 签到地址
-        "province": province,  # 省份
-        "city": city,  # 城市
-        "latitude": latitude,  # 纬度（加密）
-        "remark": remark,  # 备注
-        "comment": "",  # 评论
-        "address_name": address_name,  # 地址名称
-        "change_sign_resource": "0",  # 签到资源变更
-        "longitude": longitude  # 经度（加密）
+        "address": address,
+        "province": province,
+        "city": city,
+        "latitude": latitude,
+        "remark": remark,
+        "comment": "",
+        "address_name": address_name,
+        "change_sign_resource": "0",
+        "longitude": longitude
     }
-    response = requests.post(url, params=params, data=payload, headers=headers)  # 发送POST请求
-    return response.json()  # 返回响应数据
+    response = requests.post(url, params=params, data=payload, headers=headers)
+    
+    # 打印响应以进行调试
+    print(f"签到响应 (账号: {account}):", response.text)
+    
+    return response.json()
 
 def send_pushplus_message(token, title, content):
-    # 发送PushPlus消息
     url = 'http://www.pushplus.plus/send'
     data = {
-        "token": token,  # PushPlus令牌
-        "title": title,  # 消息标题
-        "content": content,  # 消息内容
-        "template": "html"  # 消息模板
+        "token": token,
+        "title": title,
+        "content": content,
+        "template": "html"
     }
-    response = requests.post(url, json=data)  # 发送POST请求
-    return response.json()  # 返回响应数据
+    response = requests.post(url, json=data)
+    return response.json()
 
 if __name__ == "__main__":
     users = [
@@ -130,37 +131,27 @@ if __name__ == "__main__":
     ]
 
     for user in users:
-        # 获取当前日期和时间
         current_time = datetime.now()
-        current_weekday = current_time.weekday()  # 0 = Monday, 6 = Sunday
-        current_hour = current_time.hour  # 获取当前小时
+        current_weekday = current_time.weekday()
+        current_hour = current_time.hour
 
-        # 打印脚本触发时间
         print(f"脚本触发时间: {current_time}")
 
-        # 判断是否为周末
         if current_weekday >= 5:
-            # 如果是周末，将 remark 改为 14
             remark = "14"
-            # 如果是周末，跳过特定用户
-            #if user["account"] in ["0708220244"]:
-                #print(f"Skipping user {user['account']} on weekend")
-                #continue
         else:
-            # 平时根据时间段设置 remark
-            if current_hour < 12:
-                remark = "0"  # 上午
-            else:
-                remark = "8"  # 下午
+            remark = "0" if current_hour < 12 else "8"
 
-        token = get_token(user["account"], user["password"], user["school_id"])  # 获取Token
-        print('token:', token)
-        time.sleep(5)  # 等待5秒
-        data = sign_in(token, user["address"], user["province"], user["city"], user["latitude"], user["longitude"], user["address_name"], remark)  # 签到
-        print('message:', data['message'])
+        token = get_token(user["account"], user["password"], user["school_id"])
+        if token:
+            print('token:', token)
+            time.sleep(5)
+            data = sign_in(token, user["address"], user["province"], user["city"], user["latitude"], user["longitude"], user["address_name"], remark)
+            print('message:', data['message'])
 
-        # 发送 PushPlus 消息
-        title = '签到结果'
-        content = f"签到消息: {data['message']}"
-        pushplus_response = send_pushplus_message(user["pushplus_token"], title, content)  # 发送PushPlus消息
-        print('PushPlus response:', pushplus_response)
+            title = '签到结果'
+            content = f"签到消息: {data['message']}"
+            pushplus_response = send_pushplus_message(user["pushplus_token"], title, content)
+            print('PushPlus response:', pushplus_response)
+        else:
+            print(f"获取令牌失败 (账号: {user['account']})")
