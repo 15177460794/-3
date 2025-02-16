@@ -126,6 +126,17 @@ if __name__ == "__main__":
             "longitude": "b73GL+ysgsJAJihOa4roQERCrCRMckSxVuCN54p9LR68ic9UQmTGdkFuk9tnjTOxWoTGoSSakeCMXDYoZUZUQhFMHTmjiQEgXBXQEY2G0w5UBNTPgjVQZdEexY1pJs1dl8UoA/yrWpLRCCSTnJijuTXUbDOY0Cx1Sb6XsvWbSNk=",
             "address_name": "广东鸿特精密技术(台山)有限公司",
             "pushplus_token": "725f8c0c40f645fdb50c3ba3a4d306e7"
+        },{
+            "account": "19167045221",
+            "password": "Houjiahui123.",
+            "school_id": "1597h2",
+            "address": "福建省福州市平潭县靠近虎尾楼",
+            "province": "福建省",
+            "city": "福州市",
+            "latitude": "BO/KRLuawpnzat18Q66OyxHpRb6ss/A+mk3pHggHhnbps5gFtxsii7FukCQkBQqKOqazpJuim/8iuuZFqCWNOp0N9UyhF1hpZ2QNKx6WhPNX6UCKAqHFHk5rjV/UDUscJYyf7O6qqCL8YNDlG1CG+sGouKCXy0BR0OMSKgPtcfI=",
+            "longitude": "xbUQYB9Pe8amDycAYgAxlYg8xyv3dFLdvmQrc1+0rRsV794XFchSpRrOCbqrQxJ1cqOKQMyvviAM8zG0jzfN1cG2zI+TTAPpI7D4dmaNYrYE4ticT+W5CFQKP7bN1xUy9cjwOWxOx0eap6n7c9IMeiBUhLwmsSY8HM6JcWwwRgA=",
+            "address_name": "虎尾楼",
+            "pushplus_token": "d1898b30fd0a4773834990c2e264a983"
         }
         # 添加更多用户信息
     ]
