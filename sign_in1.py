@@ -59,17 +59,6 @@ def send_pushplus_message(token, title, content):
 if __name__ == "__main__":
     users =  [
         {
-            "account": "221020830107",
-            "password": "330577415@Ryj",
-            "school_id": "267",
-            "address": "广东省广州市天河区APM线",
-            "province": "广东省",
-            "city": "广州市",
-            "latitude": "yjE7UWHPf3Rd21pPp8WKghp0LUgeKLGybPbgGerlX1/89RxeNLvpjLDzhdpUtbbrM0Rwj0GT4Err\nXNShWKQrJ8QoCp/dbnqStw62A2bFt9hPtD0myGHI6NaSfWeDdVHP5wKZRNdtGxtJTF4fSLVs42ie\nKkLYkz64P0ipTmiUBkE=\n",
-            "longitude": "LF81jHnOPdqgrcvW8sSTfLRtxoaI5vcgsxhZ06IepCfDLkX5t36JwipHOOXmbUClZvhYM4feOcFw\nRVdflYbZGFkTqj5CwlzdhuXV2f6l9jKwUH3PgcBvdzVdD5LF6N6pr/+0tKvPkqqTabQZNKc2qNpn\n+BUXr4nNU1DJGzCGWzs=\n",
-            "address_name": "黄埔大道(地铁站)",
-            "pushplus_token": "725f8c0c40f645fdb50c3ba3a4d306e7"
-        },{
             "account": "221020430147",
             "password": "$qaQ201030",
             "school_id": "267",
@@ -137,7 +126,18 @@ if __name__ == "__main__":
             "longitude": "xbUQYB9Pe8amDycAYgAxlYg8xyv3dFLdvmQrc1+0rRsV794XFchSpRrOCbqrQxJ1cqOKQMyvviAM8zG0jzfN1cG2zI+TTAPpI7D4dmaNYrYE4ticT+W5CFQKP7bN1xUy9cjwOWxOx0eap6n7c9IMeiBUhLwmsSY8HM6JcWwwRgA=",
             "address_name": "虎尾楼",
             "pushplus_token": "d1898b30fd0a4773834990c2e264a983"
-        }
+        },{
+            "account": "2034959497",
+            "password": "Zqw2034959497.",
+            "school_id": "1597h2",
+            "address": "福建省漳州市龙海区角美镇东美村南园",
+            "province": "福建省",
+            "city": "漳州市",
+            "latitude": "KDSRLv5qi8y3uUeRAeBW1/8K7zfe9CPnlQkcK5qLfQ/QoFq9yHUewwHP1snphJfbIriB/LnnrUjn66EBCc8JCfsYeota4Vmiqd8vHG+D8gst28mAaUEovrBRCxOk0fvPHAlPzzI6BsQSe4LZt0kVjZR2IC4k86AEWDbjIPUucXs=",
+            "longitude": "0twkPSWx3kPqZJOBzW/4lUN5PuY65VWemTWhFGkPDuAbW+OWj2KKtsZ9F+wyovWAiE2Wb9PKaTCby9M+7DSja4SBL89DBtr4M2N2HWE4/plwp4H8EVdhSu4mBk7Hdlua1URR4zUc6MRKwDxcS7Kblph7j+/zkV8ytds08vnTIPs=",
+            "address_name": "南园培新幼儿园",
+            "pushplus_token": "d1898b30fd0a4773834990c2e264a983"
+            }
         # 添加更多用户信息
     ]
 
