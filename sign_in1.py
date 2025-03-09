@@ -127,7 +127,7 @@ if __name__ == "__main__":
             "address_name": "虎尾楼",
             "pushplus_token": "d1898b30fd0a4773834990c2e264a983"
         },{
-            "account": "2034959497",
+            "account": "13706907925",
             "password": "Zqw2034959497.",
             "school_id": "1597h2",
             "address": "福建省漳州市龙海区角美镇东美村南园",
