@@ -94,15 +94,15 @@ if __name__ == "__main__":
             "address_name": "广西北流华生瓷业有限责任公司",
             "pushplus_token": "7861c1489c324e74b5fd7334e5a1b728"
         },{
-            "account": "221050530111",
-            "password": "Fanyijun1212@",
+            "account": "221050530103",
+            "password": "Ws530103@",
             "school_id": "267",
-            "address": "广东省惠州市惠城区和畅六路37号靠近罗格朗智能电气(惠州)有限公司宿舍区",
+            "address": "广东省东莞市东莞市富兴苑东门南210米",
             "province": "广东省",
-            "city": "惠州市",
-            "latitude": "Q77arll5f+6Fwz/aRVeMWRteMFdR+qhhcKE7nOEhxsCdx+aInj2IPnYA2tSCMWcVgoR1wK4lt0mnnfNG3moIgxqJowoFmOzxFe6CLtdtZKkXLdq3zZ3Fxnw896J96ZTh8tgvBCAGmzxfptdXUqHDmZk7A56IQwUGY5/9Komxgm8=",
-            "longitude": "aKqdXsA6ceHzNQy05wfnnwKtwH7WAEPO/cVoBT3UNivHWyA4vsR4NQ/dGa65A0sudxoVS6WajRPxuVAfG/wJVakQLyXTV2mARJpJ7Oe/9X+31IAOaF6MOBEHvyUAQTTLWtrB9JixeIxCDQV/99uFfF1OTYv+VolLXdCSgD7lHp8=",
-            "address_name": "罗格朗智能电气(惠州)有限公司宿舍区",
+            "city": "东莞市",
+            "latitude": "SwKOHR6R1vjbKmgqkGqe4PwZfK2SJ6pUs6aMruq7w7Le8HfmOKJl/EHHJXAu3+LOOFSxJ6ZbVPCZ\n6DbVvMdIic5wCxQhp4zvnDDD29c3TdRZiKvtz6pm3MIld0L8Ma6gFff04rVCIZyjwNvaPafK2fDs\ndJeFaj5NSw4f9XlMqkI=\n",
+            "longitude": "KRANUkebG7Y8wW9WtGOWHL+sbYdnfVvYjOZP3qE1E5sRWvNtLrED0b0bxSl8d/SehpIJpboL5ZWr\n2o5PGFnMn0XAxqEnTslF9kfMzDzjJxlDNBoU8KMHX6V7orwsWwHGj85/KM3YGnJ/4aA2NOfbVpdr\nluylgAcmPxr4DTgu9ac=\n",
+            "address_name": "长安汽配广场",
             "pushplus_token": "5deb739ac0a6468fb174ab61738eedf1"
         },{
             "account": "19167045221",
